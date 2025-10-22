@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Added</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 40px 60px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      color: #2ecc71;
+      font-size: 24px;
+      margin-bottom: 20px;
+      animation: pop 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .success-icon {
+      font-size: 50px;
+      color: #2ecc71;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="success-icon">&#9989;</div>
+    <h2>Student has been added successfully!</h2>
+    <a href="add" class="button">Add Another Student</a>
+    <a href="list" class="button" style="margin-left: 10px;">View Student List</a>
+  </div>
+</body>
+</html>

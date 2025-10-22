@@ -1,0 +1,6 @@
+student\config\AppConfig.class
+student\service\StudentService.class
+student\config\WebConfig.class
+student\repository\StudentRepo.class
+student\controller\WebController.class
+student\model\Student.class

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Student</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+        * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(14px);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      width: 420px;
+      animation: fadeIn 0.6s ease-out;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+    }
+
+    form:hover {
+      transform: rotateX(1deg) rotateY(1deg) scale(1.02);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 24px;
+      position: relative;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px 12px 42px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      background-color: rgba(255, 255, 255, 0.85);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    .form-group input:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 6px rgba(0, 191, 255, 0.2);
+    }
+
+    .form-group input:focus {
+      border-color: #4A90E2;
+      box-shadow: 0 0 10px rgba(74, 144, 226, 0.4);
+      outline: none;
+    }
+
+    .form-group label {
+      position: absolute;
+      top: 50%;
+      left: 42px;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: #888;
+      pointer-events: none;
+      transition: 0.3s ease;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 12px;
+      background: white;
+      padding: 0 6px;
+      font-size: 12px;
+      color: #4A90E2;
+      animation: bounce 0.3s ease;
+    }
+
+    .form-group .icon {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #4A90E2;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    button {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #00BFFF, #009ACD);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #009ACD, #0077B6);
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 191, 255, 0.4);
+    }
+
+    button:active::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 200%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: ripple 0.6s ease-out;
+      z-index: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(-50%) scale(1); }
+      50% { transform: translateY(-60%) scale(1.05); }
+      100% { transform: translateY(-50%) scale(1); }
+    }
+
+    @keyframes ripple {
+      from { opacity: 1; transform: scale(0); }
+      to { opacity: 0; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <form action="save-Student" method="post">
+    <h2>&#10133Add Student Details</h2>
+
+    <div class="form-group">
+      <span class="icon">&#127380;</span>
+      <input type="text" name="sid" required placeholder=" " />
+      <label>Student ID</label>
+    </div>
+
+    <div class="form-group">
+      <span class="icon">&#128100;</span>
+      <input type="text" name="name" required placeholder=" " />
+      <label>Student Name</label>
+    </div>
+
+    <div class="form-group">
+      <span class="icon">&#128216;</span>
+      <input type="text" name="course" required placeholder=" " />
+      <label>Course</label>
+    </div>
+
+    <div class="form-group">
+      <span class="icon">&#128205;</span>
+      <input type="text" name="city" required placeholder=" " />
+      <label>City</label>
+    </div>
+
+    <div class="button-group">
+      <button type="button" onclick="window.location.href='/Student-Mgmt/'">&#127968; Home</button>
+      <button type="submit">&#9989; Add Student</button>
+    </div>
+
+  </form>
+</body>
+</html>
