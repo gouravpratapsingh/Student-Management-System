@@ -42,6 +42,5 @@ build/
 *.class
 *.log
 *.jar
-*.war
 .idea/
 *.db
