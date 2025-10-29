@@ -52,13 +52,6 @@
             <version>42.7.3</version>
         </dependency>
 
-        <!-- JSTL Support for JSP -->
-        <dependency>
-            <groupId>org.glassfish.web</groupId>
-            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-
         <!-- Servlet API (provided because external Tomcat supplies it) -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
@@ -67,6 +60,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- JSTL Support for JSP-->
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
