@@ -37,7 +37,7 @@ public class WebController {
         return "home";
     }
 
-    @GetMapping("/home")
+    @GetMapping("/Student-Mgmt")
     public String backToHome(){
         return "home";
     }
