@@ -36,7 +36,7 @@ public class AppConfig{
     private DriverManagerDataSource getdataSource(){
         DriverManagerDataSource driversource = new DriverManagerDataSource();
         driversource.setDriverClassName("org.postgresql.Driver");
-        driversource.setUrl("postgresql://root:JOKwvITpkhKeUqpPAsr1ZLmJMD9HTTL3@dpg-d40u7kfdiees73akeoa0-a/students_data_awan");
+        driversource.setUrl("jdbc:postgresql://dpg-d40u7kfdiees73akeoa0-a.oregon-postgres.render.com:5432/students_data_awan");
         driversource.setUsername("root");
         driversource.setPassword("JOKwvITpkhKeUqpPAsr1ZLmJMD9HTTL3");
         return driversource;
