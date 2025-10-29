@@ -1,17 +1,17 @@
-# Use official Tomcat image with Java 17
+# Use Tomcat with Java 17
 FROM tomcat:10.1-jdk17-temurin
 
-# Set working directory inside the container
+# Set working directory
 WORKDIR /usr/local/tomcat
 
-# Remove default webapps to avoid conflicts
-RUN rm -rf webapps/*
+# Remove default webapps (optional but cleaner)
+RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Copy your WAR file into Tomcat's webapps directory
-COPY target/Student-Mgmt.war webapps/ROOT.war
+# Copy WAR file from Maven target to Tomcat
+COPY target/Student-Mgmt.war /usr/local/tomcat/webapps/ROOT.war
 
-# Expose the default Tomcat port
+# Expose port 8080
 EXPOSE 8080
 
-# Start Tomcat server
+# Start Tomcat
 CMD ["catalina.sh", "run"]

@@ -35,16 +35,16 @@ public class AppConfig{
 
     private DriverManagerDataSource getdataSource(){
         DriverManagerDataSource driversource = new DriverManagerDataSource();
-        driversource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        driversource.setUrl("jdbc:mysql://localhost:3306/StudentMgmtSys?createDatabaseIfNotExist=true");
+        driversource.setDriverClassName("org.postgresql.Driver");
+        driversource.setUrl("postgresql://root:JOKwvITpkhKeUqpPAsr1ZLmJMD9HTTL3@dpg-d40u7kfdiees73akeoa0-a/students_data_awan");
         driversource.setUsername("root");
-        driversource.setPassword("2208");
+        driversource.setPassword("JOKwvITpkhKeUqpPAsr1ZLmJMD9HTTL3");
         return driversource;
     }
 
     private Properties getProperty(){
         Properties properties = new Properties();
-        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL8Dialect");
+        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         properties.setProperty("hibernate.hbm2ddl.auto", "update");
         properties.setProperty("hibernate.show_sql", "true");
         return properties;
