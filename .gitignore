@@ -37,10 +37,3 @@ build/
 
 ### Mac OS ###
 .DS_Store
-
-
-*.class
-*.log
-*.jar
-.idea/
-*.db
