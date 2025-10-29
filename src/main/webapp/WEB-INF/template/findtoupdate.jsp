@@ -215,7 +215,7 @@
       <p class="error">&#9888; ${notfound} <br> Please enter the valid Student ID</p>
     </c:if>
 
-    <a href="home" class="back-link">&#127968; &#8592; Back to Home</a>
+    <a href="/Student-Mgmt/" class="back-link">&#127968; &#8592; Back to Home</a>
   </div>
 </body>
 </html>

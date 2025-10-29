@@ -175,7 +175,7 @@
   <br><br>
   <div class="controls">
     <button onclick="exportToCSV()">⬇️ Export to CSV</button>
-    <button onclick="home">⬅️ Back to Home</button>
+    <button onclick="window.location.href='/Student-Mgmt/'">⬅️ Back to Home</button>
   </div>
 
 

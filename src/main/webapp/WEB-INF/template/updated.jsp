@@ -79,7 +79,7 @@
     <p>The student's information has been updated.</p>
     <div class="actions">
       <a href="list">&#128203; View Student List</a>
-      <a href="home" class="back-link">&#127968; Back to Home</a>
+      <a href="/Student-Mgmt/" class="back-link">&#127968; Back to Home</a>
     </div>
   </div>
 </body>
