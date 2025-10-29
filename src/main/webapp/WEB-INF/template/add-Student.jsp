@@ -190,7 +190,7 @@
     </div>
 
     <div class="button-group">
-      <button type="button" onclick="/">&#127968; Home</button>
+      <button type="button" onclick="home">&#127968; Home</button>
       <button type="submit">&#9989; Add Student</button>
     </div>
 

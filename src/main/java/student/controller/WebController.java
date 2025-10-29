@@ -37,6 +37,11 @@ public class WebController {
         return "home";
     }
 
+    @GetMapping("/home")
+    public String backToHome(){
+        return "home";
+    }
+
     @PostMapping("/show")
     public String show(@RequestParam("sid") int sid, Model model){
         Student student = service.getStudent(sid);
