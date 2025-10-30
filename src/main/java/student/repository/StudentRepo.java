@@ -31,8 +31,7 @@ public class StudentRepo{
 
     public List<Student> getlist() {
         Query<Student> query = session.createQuery("from Student",Student.class);
-        List<Student> studentList = query.list();
-        return studentList;
+        return query.list();
     }
 
     public Student getstudent(int sid) {
@@ -49,7 +48,7 @@ public class StudentRepo{
 
     public void delete(Student student) {
         transaction.begin();
-        session.delete(student);
+        session.remove(student);
         transaction.commit();
     }
 }
