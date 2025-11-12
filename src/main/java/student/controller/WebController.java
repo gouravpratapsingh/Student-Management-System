@@ -39,7 +39,7 @@ public class WebController {
 
     @GetMapping("/Student-Mgmt/")
     public String backToHome(){
-        return "home";
+        return "redirect:/home";
     }
 
     @PostMapping("/show")
